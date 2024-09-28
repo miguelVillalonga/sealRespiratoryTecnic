@@ -1,0 +1,81 @@
+/* Configuración básica del body */
+body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    font-family: Arial, sans-serif;
+    color: white;
+    overflow: hidden;
+}
+
+/* Estilo para la pantalla de inicio */
+.loading-screen {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url('ruta/a/tu/imagen-navy-seal.jpg');
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+    color: white;
+    z-index: 10;
+}
+
+.loading-screen .content {
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.loader {
+    margin-top: 20px;
+    border: 8px solid #f3f3f3;
+    border-top: 8px solid #00BFFF;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    animation: spin 2s linear infinite;
+}
+
+/* Animación del cargador (círculo giratorio) */
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Ocultar el contenido principal al principio */
+.hidden {
+    display: none;
+}
+
+/* Estilos para el contenedor principal (animación de respiración) */
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+.ball {
+    width: 50px;
+    height: 50px;
+    background-color: #00BFFF;
+    border-radius: 50%;
+    animation: breathing 19s infinite;
+}
+
+@keyframes breathing {
+    0% { width: 50px; height: 50px; }
+    25% { width: 600px; height: 600px; } /* Inhalar 4s */
+    50% { width: 600px; height: 600px; } /* Contener el aire 7s */
+    100% { width: 50px; height: 50px; } /* Exhalar 8s */
+}
